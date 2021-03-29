@@ -1,4 +1,4 @@
-const person1 = {
+const personEnriki = {
     name: 'Enriki',
     age: 30,
     city: 'London',
@@ -7,7 +7,7 @@ const person1 = {
     drink: 'juse',
 };
 
-const person2 = {
+const personSara = {
     name: 'Sara',
     age: 26,
     city: 'London',
@@ -15,20 +15,20 @@ const person2 = {
     hobby: 'watch tv, write an article',
 };
 
-const person3 = {
+const personAnn = {
     name: 'Ann',
     age: 4,
     city: 'London',
     hobby: 'draw',
 };
 
-const person4 = {
+const personTommy = {
     name: 'Tommy',
     age: 4,
     city: 'London',
 };
 
-const person5 = {
+const personJim = {
     name: 'Jim',
     age: 60,
     city: 'Manchester',
@@ -36,7 +36,7 @@ const person5 = {
     hobby: 'travel',
 };
 
-const person6 = {
+const personKelly = {
     name: 'Kelly',
     age: 60,
     city: 'Manchester',
@@ -44,13 +44,13 @@ const person6 = {
     hobby: 'travel',
 };
 
-const person7 = {
+const personEnriqueMother = {
     name: "Enrique's mother",
     age: 66,
     city: 'Liverpool',
 };
 
-const person8 = {
+const personNikolay = {
     name: 'Nikolay',
     age: 70,
     city: 'Siberia',
@@ -59,41 +59,41 @@ const person8 = {
     child: false,
 };
 
-person1['married to'] = person2;
-person1.child = person3;
-person1.mother = person7;
+personEnriki.marriedTo = personSara;
+personEnriki.child = personAnn;
+personEnriki.mother = personEnriqueMother;
 
-person2['married to'] = person1.name;
-person2.child = person3.name;
-person2.father = person5.name;
-person2.mother = person6.name;
+personSara.marriedTo = personEnriki;
+personSara.child = personAnn;
+personSara.father = personJim;
+personSara.mother = personKelly;
 
-person3.father = person1.name;
-person3.mother = person2.name;
-person3.friend = person4.name;
-person3.grandmother = `${person6.name},  ${person7.name}`;
-person3.grandfather = person5.name;
+personAnn.father = personEnriki;
+personAnn.mother = personSara;
+personAnn.friend = personTommy;
+personAnn.grandmother = `${personKelly.name},  ${personEnriqueMother.name}`;
+personAnn.grandfather = personJim.name;
 
-person4.friend = person3.name;
+personTommy.friend = personAnn;
 
-person5['married to'] = person6.name;
-person5.child = person2.name;
-person5.granddaughter = person3.name;
+personJim.marriedTo = personKelly;
+personJim.child = personSara;
+personJim.granddaughter = personAnn;
 
-person6['married to'] = person5.name;
-person6.child = person2.name;
-person6.granddaughter = person3.name;
-person7['married to'] = person8.name;
-person7.child = person1.name;
-person7.granddaughter = person3.name;
+personKelly.marriedTo = personJim;
+personKelly.child = personSara;
+personKelly.granddaughter = personAnn;
+personEnriqueMother.marriedTo = personNikolay;
+personEnriqueMother.child = personEnriki;
+personEnriqueMother.granddaughter = personAnn;
 
-person8['married to'] = person7.name;
+personNikolay.marriedTo = personEnriqueMother;
 
-console.log(person1);
-console.log(person2);
-console.log(person3);
-console.log(person4);
-console.log(person5);
-console.log(person6);
-console.log(person7);
-console.log(person8);
+console.log(personEnriki);
+console.log(personSara);
+console.log(personAnn);
+console.log(personTommy);
+console.log(personJim);
+console.log(personKelly);
+console.log(personEnriqueMother);
+console.log(personNikolay);
